@@ -26,8 +26,8 @@ gcc -fPIC -shared sum.c -o libsum.so
 -  go程序中指定 CFLAGS 和 LDFLAGS
 
 ```
-#cgo  CFLAGS:  -I  ./include 
-#cgo  LDFLAGS: -L  -lsum
+#cgo  CFLAGS:  -I  ../include 
+#cgo  LDFLAGS: -L  ../lib -lsum
 ```
 
 -  运行go程序或者发布时候指定project中lib需要加入到LD_LIBRARY_PATH中
